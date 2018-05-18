@@ -21,7 +21,7 @@ import org.testng.annotations.Test;
 
 import pageObjects.CheckOutPageObjects;
 import pageObjects.LogInPageObjects;
-import pageObjects.SignInPageObjects;
+import pageObjects.SignUpPageObjects;
 import resources.BaseConnection;
 import resources.DataObjects;
 import resources.Utilities;
@@ -50,14 +50,14 @@ public class WebTest extends BaseConnection {
 	}
 	
 	/*
-	 * All the methods here are dependent on one another. This helps in sequential execution of test in order.
+	 * All the methods here are dependent on one another. testNG's dependsOnMethods has been used. This helps in sequential execution of test in order.
 	 */
 
 	@Test(priority = 1)
-	public void signInTest() {
+	public void signUpTest() {
 
 		DataObjects databean = context.getBean("signUpDataBean", DataObjects.class);
-		SignInPageObjects signObj = new SignInPageObjects(driver);
+		SignUpPageObjects signObj = new SignUpPageObjects(driver);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(signObj.getLoginButton())).click();
 		signObj.getEmailCreateButton().sendKeys(Utilities.getTestAccount());
 		signObj.getSubmitCreateButton().click();
@@ -93,7 +93,7 @@ public class WebTest extends BaseConnection {
 		log.info("SignIn test completed Successfully!!!");
 	}
 
-	@Test(dependsOnMethods = { "signInTest" }, dataProvider = "getData")
+	@Test(dependsOnMethods = { "signUpTest" }, dataProvider = "getData")
 	public void logInTest(String existingUserEmail, String existingUserPassword) {
 
 		DataObjects loginDataBean = context.getBean("logInTestDataBean", DataObjects.class);

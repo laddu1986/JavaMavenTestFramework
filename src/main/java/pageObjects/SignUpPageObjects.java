@@ -4,12 +4,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class SignInPageObjects {
-
+public class SignUpPageObjects {
+	
+	
+/*
+ * All the objects concerned to the sign in page reside here
+ */
 	
 	WebDriver driver;
 	
-	public SignInPageObjects(WebDriver driver) {
+	public SignUpPageObjects(WebDriver driver) {
 		this.driver=driver;
 	}
 	

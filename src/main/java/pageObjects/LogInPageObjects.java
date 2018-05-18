@@ -5,7 +5,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class LogInPageObjects {
-
+	
+	
+	/*
+	 * All the objects concerned to the login in page reside here
+	 */
 
 	WebDriver driver;
 	

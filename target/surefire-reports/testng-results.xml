@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="39075" started-at="2018-05-18T13:33:55Z" finished-at="2018-05-18T13:34:34Z">
+  <suite name="Suite" duration-ms="51258" started-at="2018-05-18T14:33:04Z" finished-at="2018-05-18T14:33:55Z">
     <groups>
     </groups>
-    <test name="Test Web" duration-ms="39075" started-at="2018-05-18T13:33:55Z" finished-at="2018-05-18T13:34:34Z">
+    <test name="Test Web" duration-ms="51258" started-at="2018-05-18T14:33:04Z" finished-at="2018-05-18T14:33:55Z">
       <class name="com.hellofresh.challenge.WebTest">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.hellofresh.challenge.WebTest@31c88ec8]" name="setUp" is-config="true" duration-ms="9311" started-at="2018-05-18T19:03:55Z" finished-at="2018-05-18T19:04:04Z">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.hellofresh.challenge.WebTest@72f926e6]" name="setUp" is-config="true" duration-ms="22664" started-at="2018-05-18T20:03:04Z" finished-at="2018-05-18T20:03:27Z">
           <params>
             <param index="0">
               <value>
@@ -18,11 +18,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="signInTest()[pri:0, instance:com.hellofresh.challenge.WebTest@31c88ec8]" name="signInTest" duration-ms="9369" started-at="2018-05-18T19:04:04Z" finished-at="2018-05-18T19:04:13Z">
+        <test-method status="PASS" signature="signUpTest()[pri:0, instance:com.hellofresh.challenge.WebTest@72f926e6]" name="signUpTest" duration-ms="9186" started-at="2018-05-18T20:03:27Z" finished-at="2018-05-18T20:03:36Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- signInTest -->
-        <test-method status="PASS" signature="logInTest(java.lang.String, java.lang.String)[pri:0, instance:com.hellofresh.challenge.WebTest@31c88ec8]" name="logInTest" duration-ms="3463" started-at="2018-05-18T19:04:13Z" data-provider="getData" depends-on-methods="com.hellofresh.challenge.WebTest.signInTest" finished-at="2018-05-18T19:04:17Z">
+        </test-method> <!-- signUpTest -->
+        <test-method status="PASS" signature="logInTest(java.lang.String, java.lang.String)[pri:0, instance:com.hellofresh.challenge.WebTest@72f926e6]" name="logInTest" duration-ms="3268" started-at="2018-05-18T20:03:36Z" data-provider="getData" depends-on-methods="com.hellofresh.challenge.WebTest.signUpTest" finished-at="2018-05-18T20:03:39Z">
           <params>
             <param index="0">
               <value>
@@ -38,11 +38,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logInTest -->
-        <test-method status="PASS" signature="checkoutTest()[pri:0, instance:com.hellofresh.challenge.WebTest@31c88ec8]" name="checkoutTest" duration-ms="16789" started-at="2018-05-18T19:04:17Z" depends-on-methods="com.hellofresh.challenge.WebTest.logInTest" finished-at="2018-05-18T19:04:34Z">
+        <test-method status="PASS" signature="checkoutTest()[pri:0, instance:com.hellofresh.challenge.WebTest@72f926e6]" name="checkoutTest" duration-ms="15979" started-at="2018-05-18T20:03:39Z" depends-on-methods="com.hellofresh.challenge.WebTest.logInTest" finished-at="2018-05-18T20:03:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkoutTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hellofresh.challenge.WebTest@31c88ec8]" name="tearDown" is-config="true" duration-ms="132" started-at="2018-05-18T19:04:34Z" finished-at="2018-05-18T19:04:34Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hellofresh.challenge.WebTest@72f926e6]" name="tearDown" is-config="true" duration-ms="149" started-at="2018-05-18T20:03:55Z" finished-at="2018-05-18T20:03:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

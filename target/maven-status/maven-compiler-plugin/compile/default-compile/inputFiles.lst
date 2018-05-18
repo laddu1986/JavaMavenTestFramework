@@ -1,6 +1,6 @@
 /Users/tanumukherjee/Downloads/qa-test-hf/src/main/java/resources/BaseConnection.java
 /Users/tanumukherjee/Downloads/qa-test-hf/src/main/java/pageObjects/LogInPageObjects.java
-/Users/tanumukherjee/Downloads/qa-test-hf/src/main/java/pageObjects/SignInPageObjects.java
+/Users/tanumukherjee/Downloads/qa-test-hf/src/main/java/pageObjects/SignUpPageObjects.java
 /Users/tanumukherjee/Downloads/qa-test-hf/src/main/java/pageObjects/CheckOutPageObjects.java
 /Users/tanumukherjee/Downloads/qa-test-hf/src/main/java/resources/Utilities.java
 /Users/tanumukherjee/Downloads/qa-test-hf/src/main/java/resources/ExtentReporterNG.java

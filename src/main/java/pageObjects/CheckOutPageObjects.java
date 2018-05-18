@@ -6,7 +6,9 @@ import org.openqa.selenium.WebElement;
 
 public class CheckOutPageObjects {
 
-	
+	/*
+	 * All the objects concerned to the Check out page reside here
+	 */
 
 	WebDriver driver;
 	

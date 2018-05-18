@@ -21,7 +21,7 @@ public class BaseConnection {
 
 	public WebDriver initializeDriver() throws IOException {
 
-		/*
+		/*Only one instance of driver is initialized which is being used across all the tests just by extending the class
 		 * Retrieving the values from a properties file and then as per the need we can
 		 * change the keys(url, browser etc)
 		 */
@@ -49,6 +49,7 @@ public class BaseConnection {
 
 	}
 
+	//Screenshot method
 	public void getScreenshot(String result) throws IOException {
 
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
