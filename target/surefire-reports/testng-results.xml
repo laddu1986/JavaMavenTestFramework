@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="3" passed="3">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="39730" started-at="2018-05-18T13:13:52Z" finished-at="2018-05-18T13:14:32Z">
+    <groups>
+    </groups>
+    <test name="Test Web" duration-ms="39730" started-at="2018-05-18T13:13:52Z" finished-at="2018-05-18T13:14:32Z">
+      <class name="com.hellofresh.challenge.WebTest">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.hellofresh.challenge.WebTest@72f926e6]" name="setUp" is-config="true" duration-ms="9632" started-at="2018-05-18T18:43:52Z" finished-at="2018-05-18T18:44:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[http://automationpractice.com/index.php]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="signInTest()[pri:0, instance:com.hellofresh.challenge.WebTest@72f926e6]" name="signInTest" duration-ms="10281" started-at="2018-05-18T18:44:02Z" finished-at="2018-05-18T18:44:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInTest -->
+        <test-method status="PASS" signature="logInTest(java.lang.String, java.lang.String)[pri:0, instance:com.hellofresh.challenge.WebTest@72f926e6]" name="logInTest" duration-ms="3262" started-at="2018-05-18T18:44:12Z" data-provider="getData" depends-on-methods="com.hellofresh.challenge.WebTest.signInTest" finished-at="2018-05-18T18:44:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[hf_challenge_123456@hf12345.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[12345678]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logInTest -->
+        <test-method status="PASS" signature="checkoutTest()[pri:0, instance:com.hellofresh.challenge.WebTest@72f926e6]" name="checkoutTest" duration-ms="16411" started-at="2018-05-18T18:44:15Z" depends-on-methods="com.hellofresh.challenge.WebTest.logInTest" finished-at="2018-05-18T18:44:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkoutTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.hellofresh.challenge.WebTest@72f926e6]" name="tearDown" is-config="true" duration-ms="131" started-at="2018-05-18T18:44:32Z" finished-at="2018-05-18T18:44:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.hellofresh.challenge.WebTest -->
+    </test> <!-- Test Web -->
+  </suite> <!-- Suite -->
+</testng-results>

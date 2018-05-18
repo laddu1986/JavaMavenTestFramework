@@ -1,0 +1,34 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="signUpDataBean" class="resources.DataObjects">
+		<property name="name" value="Firstname" />
+		<property name="lastName" value="lastName">
+		</property>
+		<property name="company" value="Company"></property>
+		<property name="password" value="qwerty"></property>
+		<property name="addressLine1" value="Qwerty, 123"></property>
+		<property name="addressLine2" value="zxcvb"></property>
+		<property name="city" value="Qwerty"></property>
+		<property name="postCode" value="12345"></property>
+		<property name="otherCode" value="qwerty"></property>
+		<property name="phoneNumber" value="12345123123"></property>
+		<property name="mobilePhoneNumber" value="2345123123"></property>
+		<property name="welcomeText" value="Welcome to your account."></property>
+		<property name="urlText" value="controller=my-account"></property>
+	</bean>
+
+	<bean id="logInTestDataBean" class="resources.DataObjects">
+		<property name="fullName" value="Joe Black" />
+		<property name="infoAccountText" value="Welcome to your account."></property>
+		<property name="urlText" value="controller=my-account"></property>
+	</bean>
+
+	<bean id="checkOutDataBean" class="resources.DataObjects">
+		<property name="checkOutMessage" value="Your order on My Store is complete."></property>
+		<property name="urlOrder" value="controller=order-confirmation"></property>
+	</bean>
+
+</beans>
