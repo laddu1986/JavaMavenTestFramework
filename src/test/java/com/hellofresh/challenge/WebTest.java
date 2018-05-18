@@ -27,10 +27,19 @@ import resources.DataObjects;
 import resources.Utilities;
 
 public class WebTest extends BaseConnection {
+	
+	/*
+	 * Creating an instance of Log4J library. It will collect all the logs
+	 */
 
 	public static Logger log = LogManager.getLogger(BaseConnection.class.getName());
 	ApplicationContext context;
 
+	/*
+	 * Before Test has Parameter annotation. It helps in configuring the tests from XML file. So tests can be run in any environment. Just change the
+	 * url environment in the XML file
+	 */
+	
 	@Parameters({ "url" })
 	@BeforeTest
 	public void setUp(String url) throws IOException {
@@ -39,6 +48,10 @@ public class WebTest extends BaseConnection {
 		context = new ClassPathXmlApplicationContext("spring.xml");
 		log.info("All instance initialization done!!");
 	}
+	
+	/*
+	 * All the methods here are dependent on one another. This helps in sequential execution of test in order.
+	 */
 
 	@Test(priority = 1)
 	public void signInTest() {
@@ -123,6 +136,10 @@ public class WebTest extends BaseConnection {
 		log.info("Check Out test completed Successfully!!!");
 	}
 
+	/*
+	 * Data Provider helps provide the username and password data to the above method.This avoids harcoding in the test methods itself
+	 */
+	
 	@DataProvider
 	private Object[][] getData() {
 		return new Object[][] { { "hf_challenge_123456@hf12345.com", "12345678" } };
