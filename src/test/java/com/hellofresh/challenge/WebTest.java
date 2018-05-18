@@ -28,10 +28,9 @@ import resources.Utilities;
 
 public class WebTest extends BaseConnection {
 
-	
 	public static Logger log = LogManager.getLogger(BaseConnection.class.getName());
 	ApplicationContext context;
-	
+
 	@Parameters({ "url" })
 	@BeforeTest
 	public void setUp(String url) throws IOException {
@@ -43,8 +42,8 @@ public class WebTest extends BaseConnection {
 
 	@Test(priority = 1)
 	public void signInTest() {
-		
-		DataObjects databean = context.getBean("signUpDataBean",DataObjects.class);				
+
+		DataObjects databean = context.getBean("signUpDataBean", DataObjects.class);
 		SignInPageObjects signObj = new SignInPageObjects(driver);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(signObj.getLoginButton())).click();
 		signObj.getEmailCreateButton().sendKeys(Utilities.getTestAccount());
@@ -83,10 +82,10 @@ public class WebTest extends BaseConnection {
 
 	@Test(dependsOnMethods = { "signInTest" }, dataProvider = "getData")
 	public void logInTest(String existingUserEmail, String existingUserPassword) {
-		
-		DataObjects loginDataBean = context.getBean("logInTestDataBean",DataObjects.class);	
+
+		DataObjects loginDataBean = context.getBean("logInTestDataBean", DataObjects.class);
 		LogInPageObjects loginObj = new LogInPageObjects(driver);
-		//String fullName = "Joe Black";
+		// String fullName = "Joe Black";
 		wait.until(ExpectedConditions.visibilityOfElementLocated(loginObj.getLoginButton())).click();
 		loginObj.getEmailButton().sendKeys(existingUserEmail);
 		loginObj.getPasswordButton().sendKeys(existingUserPassword);
@@ -102,9 +101,7 @@ public class WebTest extends BaseConnection {
 
 	@Test(dependsOnMethods = { "logInTest" })
 	public void checkoutTest() {
-		
-		System.out.println("third method");
-		DataObjects dataBean = context.getBean("checkOutDataBean",DataObjects.class);	
+		DataObjects dataBean = context.getBean("checkOutDataBean", DataObjects.class);
 		CheckOutPageObjects checkOutObj = new CheckOutPageObjects(driver);
 		wait.until(ExpectedConditions.visibilityOfElementLocated(checkOutObj.getWomenButtonOnTab())).click();
 		checkOutObj.getProduct().click();
@@ -133,8 +130,7 @@ public class WebTest extends BaseConnection {
 
 	@AfterTest
 	public void tearDown() {
-		System.out.println("ultimate end!!");
 		driver.close();
-		
+
 	}
 }
